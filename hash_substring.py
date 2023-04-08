@@ -4,14 +4,16 @@
 def read_input():
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    input_type = input().strip()
+    input_type = input().rstrip()
     if input_type == 'I':
-        pattern = input().strip()
-        text = input().strip()
+        pattern = input().rstrip()
+        text = input().rstrip()
     else:
-        with open('test_input.txt', 'r') as f:
-            pattern = f.readline().strip()
-            text = f.readline().strip()
+        choice = input().rstrip()
+        if choice == 'F':
+            with open('test_input.txt', 'r') as f:
+                pattern = f.readline().rstrip()
+                text = f.readline().rstrip()
 
     # this is the sample return, notice the rstrip function
     return pattern, text
