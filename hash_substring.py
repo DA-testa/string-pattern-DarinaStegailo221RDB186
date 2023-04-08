@@ -8,12 +8,10 @@ def read_input():
     if input_type == 'I':
         pattern = input().rstrip()
         text = input().rstrip()
-    else:
-        choice = input().rstrip()
-        if choice == 'F':
-            with open('test_input.txt', 'r') as f:
-                pattern = f.readline().rstrip()
-                text = f.readline().rstrip()
+    elif input_type == 'F':
+        with open('input.txt', 'r') as f:
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
 
     # this is the sample return, notice the rstrip function
     return pattern, text
